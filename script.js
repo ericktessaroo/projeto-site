@@ -16,15 +16,10 @@ themeBtn.addEventListener("click", () => {
 
     if (document.body.classList.contains("dark")) {
         localStorage.setItem("tema", "dark");
-
-        // 🌙 site escuro → mostra ícone de SOL
-        themeIcon.src = "img/night-mode.png";
-
+        themeIcon.src = "img/light.png";
     } else {
         localStorage.setItem("tema", "light");
-
-        // ☀️ site claro → mostra ícone de LUA
-        themeIcon.src = "img/dark-mode.png";
+        themeIcon.src = "img/dark.png";
     }
 });
 
@@ -32,7 +27,7 @@ themeBtn.addEventListener("click", () => {
 
 if (localStorage.getItem("tema") === "dark") {
     document.body.classList.add("dark");
-    themeIcon.src = "img/night-mode.png";
+    themeIcon.src = "img/light.png";
 } else {
-    themeIcon.src = "img/dark-mode.png";
+    themeIcon.src = "img/dark.png";
 }
