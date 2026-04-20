@@ -10,6 +10,7 @@
 
     .nav-right {
         margin-left: auto;
+        position: relative;
     }
 
     .menu {
@@ -29,11 +30,14 @@
 
     .menu.ativo {
         display: flex;
+        animation: menuMobileAbrir 0.3s ease;
     }
 
     .menu a {
         text-align: left;
         padding: 8px 0;
+        opacity: 1;
+        animation: none;
     }
 
     #botao {
@@ -131,5 +135,16 @@
     .menu {
         width: calc(100% - 30px);
         right: 15px;
+    }
+}
+
+@keyframes menuMobileAbrir {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
